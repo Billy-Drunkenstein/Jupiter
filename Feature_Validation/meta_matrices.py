@@ -47,13 +47,12 @@ def build_XX(
     n, p = X.shape
     XX = np.zeros((p + 1, p + 1), dtype = np.float32)
 
-    sumX = X.sum(axis = 0)
+    XT1 = X.sum(axis = 0) / n
     XTX = X.T @ X
 
     XX[0, 0] = n
-    XX[0, 1:] = sumX
-    XX[1:, 0] = sumX
-    XX[1:, 1:] = XTX
+    XX[0, 1:] = XT1
+    XX[1:, :p] = XTX
 
     return XX
 
