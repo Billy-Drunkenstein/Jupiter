@@ -38,6 +38,9 @@ def build_feature_headers(features_path, prefix = "cnfut", memory_map = True):
     return [c for c in tbl.schema.names if c.startswith(prefix)]
 
 
+# XX = [[    n    , mean(X) ],
+#       [ X.T @ X ,    0    ]]
+
 def build_XX(
     X, headers: Sequence[str]
 ):
