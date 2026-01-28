@@ -198,7 +198,7 @@ def main():
         if p2 != p:
             raise ValueError(f"Header Mismatch: Expected {p} Cols, Found {p2}")
 
-        prefix = f"y{k}."
+        prefix = f"Y{k}_"
         stats = build_XY(X, y)
         xy[prefix + "N"] = stats["N"]
         xy[prefix + "X"] = stats["X"]
