@@ -190,7 +190,7 @@ def main():
         yk = targets[keys + [tcol]].dropna(subset = [tcol])
         assert_unique_on_keys(yk, keys, "Targets")
 
-        data = features.merge(yk, on = keys, how = "inner", validate = "one_to_one")
+        data = features.merge(yk, on = keys, how = "inner", validate = "one_to_one") # Assumes: #samples eliminated by merge negligible w.r.t. N
         X = data.loc[:, headers].to_numpy(copy = False)
         y = data[tcol].to_numpy(copy = False)
 
