@@ -94,7 +94,7 @@ def main():
     t0 = time.perf_counter()
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", required = True, help = "YYYYMMDD, e.g. 2025-31")
+    ap.add_argument("--date", required = True, help = "YYYYMMDD, e.g. 20251031")
     ap.add_argument("--output_path", required = True, help = "Output directory (must already exists).")
     args = ap.parse_args()
 
