@@ -1,12 +1,20 @@
+from dataclasses import dataclass, field
 from pathlib import Path
 
+
+JOIN_KEYS = ["ukey", "ticktime", "DataDate", "TimeStamp"]
+
+SUPPORTED_METHODS = {"ols"}
+
+
+@dataclass
 class ValidationConfig:
 
     # === Paths ===
     feature_path: Path
     target_path: Path
     meta_path: Path
-    calendar_path: Path 
+    calendar_path: Path
     output_path: Path
     ref_headers_path: Path
 
@@ -20,4 +28,4 @@ class ValidationConfig:
     methods: list[str]
 
     # === Hyperparameters ===
-    hyperparams: dict
+    hyperparams: dict = field(default_factory=dict)
