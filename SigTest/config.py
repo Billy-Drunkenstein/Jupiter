@@ -8,6 +8,7 @@ class ValidationConfig:
     meta_path: Path
     calendar_path: Path 
     output_path: Path
+    ref_headers_path: Path
 
     # === Backtest parameters ===
     asof: int
