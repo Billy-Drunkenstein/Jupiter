@@ -6,6 +6,10 @@ JOIN_KEYS = ["ukey", "ticktime", "DataDate", "TimeStamp"]
 
 SUPPORTED_METHODS = {"ols"}
 
+DEFAULT_TARGET_COLS = ["y60r05"]
+
+DEFAULT_TARGET_MAPPING_PATH = Path(__file__).parent / "target_mapping.json"
+
 
 @dataclass
 class ValidationConfig:
